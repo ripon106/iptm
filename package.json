@@ -1,9 +1,11 @@
 {
   "name": "iptm-it",
   "version": "1.0.0",
-  "main": "api/index.js",
+  "type": "module",
+  "main": "index.js",
   "scripts": {
-    "start": "nodemon api/index.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
