@@ -473,9 +473,9 @@ async function initializeApp() {
     }
   });
 
-  // Test route
-  app.get("/test", (req, res) => {
-    res.send("Welcome to server");
+  // Health route
+  app.get("/health", (req, res) => {
+    res.send("ok");
   });
 
   // Default route
@@ -487,5 +487,6 @@ async function initializeApp() {
 // Initialize the app
 initializeApp().catch(console.error);
 
-// Export the Express app for Vercel
-module.exports = app;
+app.listen(process.env.PORT || 5000, () => {
+  console.log(`Server is running on port ${process.env.PORT || 5000}`);
+});
