@@ -56,7 +56,7 @@ app.put("/rpl-assesment/:id", async (req, res) => {
   const filter = { _id: new ObjectId(id) };
   const options = { upsert: true };
   const updatedData = req.body;
-
+  console.log(updatedData)
   const updateDoc = {
     $set: {
       rplTitle: updatedData.rplTitle,
